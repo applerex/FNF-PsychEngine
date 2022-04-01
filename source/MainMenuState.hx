@@ -41,7 +41,7 @@ class MainMenuState extends MusicBeatState
 		//#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
 		//#if !switch 'donate', #end
-		'options'
+		'options',
 	];
 
 	var magenta:FlxSprite;
@@ -126,6 +126,7 @@ class MainMenuState extends MusicBeatState
 			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
 
+			
 			// Free play button
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
 			var menuItem:FlxSprite = new FlxSprite(100, 250);
@@ -191,7 +192,7 @@ class MainMenuState extends MusicBeatState
 			gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
 			gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 			gfDance.animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, true);
-			gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, true);
+			//gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 			add(gfDance);
 			if(gfDance != null) {
 				danceLeft = !danceLeft;
