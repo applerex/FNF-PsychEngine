@@ -82,8 +82,6 @@ function onUpdate(elapsed)
         maxComb = combo
     end
 
-    setTextString('combo', 'Combo: '.. combo)
-    setTextString('mCombo', 'Max Combo: '.. maxComb)
     setTextString('sick', 'Sicks!!: '.. sicks)
     setTextString('good', 'Goods!: '.. goods)
     setTextString('bad', 'Bads: '.. bads)
